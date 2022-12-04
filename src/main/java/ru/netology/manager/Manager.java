@@ -32,21 +32,21 @@ public class Manager {
 
     public String[] findLast() {
 
-        int resultSize;
+        int limit = 10;
+        String[] resultSize;
         if (limit < movies.length) {
-            resultSize = limit;
+            resultSize = new String[limit];
+
         } else {
-            resultSize = movies.length;
+            resultSize = new String[movies.length];
         }
-        // Limit < movies.length ? Limit : movies.length;
+        for (int i = 0; i < resultSize.length; i++) {
 
-        String[] result = new String[resultSize];
-        for (int i = 0; i < resultSize; i++) {
-            result[i] = movies[movies.length - 1 - i];
+            resultSize[i] = movies[movies.length - i - 1];
+
 
         }
-        return result;
-
+        return resultSize;
 
     }
 }
