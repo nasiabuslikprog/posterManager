@@ -2,14 +2,14 @@ package ru.netology.manager;
 
 public class Manager {
     private String[] movies = new String[0];
-    private int Limit;
+    private int limit;
 
     public Manager() {
         int limit = 10;
     }
 
     public Manager(int limit) {
-        this.Limit = limit;
+        this.limit = limit;
 
     }
 
@@ -33,8 +33,8 @@ public class Manager {
     public String[] findLast() {
 
         int resultSize;
-        if (Limit < movies.length) {
-            resultSize = Limit;
+        if (limit < movies.length) {
+            resultSize = limit;
         } else {
             resultSize = movies.length;
         }
