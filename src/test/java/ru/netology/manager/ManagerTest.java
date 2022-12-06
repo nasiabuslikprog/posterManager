@@ -38,7 +38,6 @@ class ManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @BeforeEach
 
     @Test
     public void shouldNonSequentialAddition() {
@@ -106,27 +105,6 @@ class ManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @Test
-    public void shouldReverseOrderNegativeLimit() {
-        Manager manager = new Manager(-1);
-        manager.add(movie1);
-        manager.add(movie2);
-        manager.add(movie3);
-        manager.add(movie4);
-        manager.add(movie5);
-
-
-        String[] expected = {
-                movie5,
-                movie4,
-                movie3,
-                movie2,
-                movie1,
-
-        };
-        String[] actual = manager.findLast();
-        Assertions.assertArrayEquals(expected, actual);
-    }
 
     @Test
     public void shouldReverseOrderNoLimit() {
@@ -175,7 +153,6 @@ class ManagerTest {
                 movie4,
                 movie3,
                 movie2,
-                movie1,
 
         };
         String[] actual = manager.findLast();
@@ -201,11 +178,6 @@ class ManagerTest {
 
         String[] expected = {
                 movie5,
-                movie4,
-                movie3,
-                movie2,
-                movie1,
-
         };
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
@@ -229,12 +201,6 @@ class ManagerTest {
         String movie5 = "movie 5";
 
         String[] expected = {
-                movie5,
-                movie4,
-                movie3,
-                movie2,
-                movie1,
-
         };
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
@@ -267,7 +233,5 @@ class ManagerTest {
         };
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
-
-
     }
 }
